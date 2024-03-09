@@ -1,0 +1,63 @@
+
+.admin-header {
+	// border: 1px solid red;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	// gap: 1rem;
+	height: 72px;
+}
+.admin-logo {
+	// border: 1px solid red;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	// gap: 1rem;
+	max-width: 270px;
+	width: 100%;
+	padding: 0 0.25rem;
+	& img {
+		// border: 1px solid red;
+		max-width: 140px;
+		width: 100%;
+	}
+}
+.admin-site-bar {
+	// border: 1px solid red;
+	display: flex;
+	flex: 1;
+	padding: 0 2rem;
+
+	justify-content: space-between;
+	// align-items: center;
+	// gap: 1rem;
+}
+.admin-site-bar-btn-hamber {
+	// border: 1px solid red;
+	display: flex;
+	// justify-content: flex-start;
+	// align-items: center;
+	// gap: 1rem;
+}
+.admin-site-bar-search {
+	// border: 1px solid red;
+	display: flex;
+	// justify-content: flex-start;
+	// align-items: center;
+	// gap: 1rem;
+}
+.admin-site-bar-infor-user {
+	// border: 1px solid blue;
+	display: flex;
+	// justify-content: flex-start;
+	// align-items: center;
+	// gap: 1rem;
+}	
+.admin-site-bar-actions {
+	// border: 1px solid green;
+	display: flex;
+	// justify-content: flex-start;
+	// align-items: center;
+	// gap: 1rem;
+}
