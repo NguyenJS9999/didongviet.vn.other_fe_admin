@@ -1,3 +1,4 @@
+"use client"
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -5,89 +6,61 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import TableSortLabel from '@mui/material/TableSortLabel';
 
-import HeaderComponent from '@/components/header/header';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditNoteIcon from '@mui/icons-material/EditNote';
+import Button from '@mui/material/Button';
+import Avatar from '@mui/material/Avatar';
+import Checkbox from '@mui/material/Checkbox';
+
+
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
+
 import './home.scss';
 
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein }
+import { useEffect, useState } from 'react';
+import HeaderComponent from '@/components/header/header';
+import TableSortSelect from '@/components/table/tableSortSelect';
+import LeftSideBar from '@/components/leftSideBar/leftSideBar';
+
+
+function createData( id, name, description, price, quantity, image_url, color, created_at, updated_at ) {
+  return {  id, name, description, price, quantity, image_url, color, created_at, updated_at  }
 }
 
 const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9)
+  createData(1, 'Iphone 14', "iPhone 14 Pro Max 128GB Chính hãng (VN/A)", 26590000, 30, 'url img', 'gold', '08/03/2024', '09/03/2024'),
+  createData(2, 'Iphone 15', "iPhone 15 Pro Max 128GB Chính hãng (VN/A)", 35000000, 40, 'url img', 'red', '08/03/2024', '09/03/2024'),
 ]
 
 const Home = () => {
+
+  useEffect(() => {
+
+  }, []);
+
+  function deleteItem (id_item) {
+    console.log('deleteItem id_item: ', id_item);
+  }
+  function editItem (id_item) {
+    console.log('editItem id_item: ', id_item);
+  }
+
+  function handleCheckItem(id_item) {
+    console.log('handleCheckItem id_item: ', id_item);
+  }
+
 	return (
     <div className="admin-page">
-    {/*  */}
-    <HeaderComponent />
-    {/*  */}
-    <div className="admin-body">
-      <div className="admin-body-menu-bar">
-        <div className="admin-body-menu-bar-component">bar-component</div>
-        <div className="admin-body-menu-bar-collapse">bar-collapse</div>
-      </div>
-
-
-    <div className="admin-body-content-bar">
-      <div className="admin-body-content-bar-container">
-        <div className="admin-content-component">
-          <div className="admin-tables">
-            <div className="admin-table-component">
-            <div className="admin-table-title">title</div>
-            <div className="admin-table-actions">actions</div>
-            <div className="admin-table">
-            table
-            {/* <TableContainer component={Paper}>
-              <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                <TableHead>
-                  <TableRow>
-                    <TableCell>Dessert (100g serving)</TableCell>
-                    <TableCell align="right">Calories</TableCell>
-                    <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                    <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-                    <TableCell align="right">Protein&nbsp;(g)</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {rows.map(row => (
-                    <TableRow
-                      key={row.name}
-                      sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                    >
-                      <TableCell component="th" scope="row">
-                        {row.name}
-                      </TableCell>
-                      <TableCell align="right">{row.calories}</TableCell>
-                      <TableCell align="right">{row.fat}</TableCell>
-                      <TableCell align="right">{row.carbs}</TableCell>
-                      <TableCell align="right">{row.protein}</TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer> */}
-
-            </div>
-            <div className="admin-table-pagination">pagination</div>
-          </div>
-        </div>
-
-        </div>
+      <HeaderComponent />
+      <div className="admin-body">
+        <LeftSideBar />
+        <TableSortSelect row_data={rows} />
       </div>
     </div>
-
-</div>
-
-
-    {/*  */}
-  </div>
 	);
 };
 

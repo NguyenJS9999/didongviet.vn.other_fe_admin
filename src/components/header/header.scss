@@ -1,6 +1,7 @@
+$borderTable: rgba(224, 224, 224, 1);
 
 .admin-header {
-	// border: 1px solid red;
+	border-bottom: 1px solid $borderTable;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -8,15 +9,13 @@
 	height: 72px;
 }
 .admin-logo {
-	// border: 1px solid red;
-
+	width: 260px;
+	min-width: 160px;
+	padding: 0 0.25rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	// gap: 1rem;
-	max-width: 270px;
-	width: 100%;
-	padding: 0 0.25rem;
 	& img {
 		// border: 1px solid red;
 		max-width: 140px;
@@ -27,8 +26,7 @@
 	// border: 1px solid red;
 	display: flex;
 	flex: 1;
-	padding: 0 2rem;
-
+	padding: 0 1.5rem;
 	justify-content: space-between;
 	// align-items: center;
 	// gap: 1rem;
@@ -53,7 +51,7 @@
 	// justify-content: flex-start;
 	// align-items: center;
 	// gap: 1rem;
-}	
+}
 .admin-site-bar-actions {
 	// border: 1px solid green;
 	display: flex;

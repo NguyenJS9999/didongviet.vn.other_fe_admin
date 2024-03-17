@@ -12,7 +12,7 @@ function HeaderComponent() {
 					<img src="https://themewagon.github.io/purple-react/static/media/logo.a76c464b.svg" alt="" />
 				</div>
 				<div className="admin-site-bar">
-					<div className="admin-site-bar-btn-hamber">
+					<div className="btn admin-site-bar-btn-hamber">
 						<MenuIcon />
 					</div>
 					<div className="admin-site-bar-search">

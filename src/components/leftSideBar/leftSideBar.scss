@@ -1,0 +1,77 @@
+$borderTable: rgba(224, 224, 224, 1);
+$mainColorText: rgba(110,120,132, 1);
+
+.admin-body-menu-bar {
+	border-right: 1px solid $borderTable;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 0.5rem;
+	padding: 0.25rem;
+	min-height: calc(100vh - 70px);
+	width: 260px;
+	background: #fff;
+	padding: 0;
+	z-index: 11;
+}
+.admin-body-menu-bar-component {
+	// border: 1px solid red;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 0.25rem 0;
+	// justify-content: flex-start;
+	// align-items: center;
+	// gap: 1rem;
+}
+.admin-body-menu-bar-collapse {
+	// border: 1px solid red;
+	display: flex;
+	flex-direction: column;
+	// justify-content: flex-start;
+	// align-items: center;
+	gap: 0.25rem;
+	padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+}
+
+.admin-body-menu-bar-collapse-title {
+	color: $mainColorText;
+	height: 40px;
+	text-decoration: none !important;
+	text-transform: uppercase;
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.nav-item-link {
+	border: 4px solid transparent;
+	border-radius: 0.25rem;
+	height: 100%;
+}
+.nav-item-link-active {
+	border: 4px solid rgba(136,170,243, 1) !important;
+}
+
+.admin-body-menu-bar-collapse-list-item > div > div {
+	// border: 1px solid red;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.nav-link {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+	padding: 0.75rem 1% 0.75rem 20%;
+	color: #3e4b5b;
+	-webkit-transition-duration: .45s;
+	transition-duration: .45s;
+	transition-property: color;
+	-webkit-transition-property: color;
+	cursor: pointer;
+}
