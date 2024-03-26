@@ -1,66 +1,68 @@
-"use client"
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
-import TableSortLabel from '@mui/material/TableSortLabel';
-
-import DeleteIcon from '@mui/icons-material/Delete';
-import EditNoteIcon from '@mui/icons-material/EditNote';
-import Button from '@mui/material/Button';
-import Avatar from '@mui/material/Avatar';
-import Checkbox from '@mui/material/Checkbox';
-
-
-import Pagination from '@mui/material/Pagination';
-import Stack from '@mui/material/Stack';
-
-import './home.scss';
-
+'use client';
+import { NextUIProvider } from '@nextui-org/react';
 
 import { useEffect, useState } from 'react';
 import HeaderComponent from '@/components/header/header';
-import TableSortSelect from '@/components/table/tableSortSelect';
 import LeftSideBar from '@/components/leftSideBar/leftSideBar';
+import UserList from '@/components/components-app/userList/userList';
 
+import {
+	Table,
+	TableHeader,
+	TableBody,
+	TableColumn,
+	TableRow,
+	TableCell
+} from '@nextui-org/react';
 
-function createData( id, name, description, price, quantity, image_url, color, created_at, updated_at ) {
-  return {  id, name, description, price, quantity, image_url, color, created_at, updated_at  }
-}
-
-const rows = [
-  createData(1, 'Iphone 14', "iPhone 14 Pro Max 128GB Chính hãng (VN/A)", 26590000, 30, 'url img', 'gold', '08/03/2024', '09/03/2024'),
-  createData(2, 'Iphone 15', "iPhone 15 Pro Max 128GB Chính hãng (VN/A)", 35000000, 40, 'url img', 'red', '08/03/2024', '09/03/2024'),
-]
+import './home.scss';
 
 const Home = () => {
+	const [typeNav, setTypeNav] = useState('Users');
 
-  useEffect(() => {
-
-  }, []);
-
-  function deleteItem (id_item) {
-    console.log('deleteItem id_item: ', id_item);
-  }
-  function editItem (id_item) {
-    console.log('editItem id_item: ', id_item);
-  }
-
-  function handleCheckItem(id_item) {
-    console.log('handleCheckItem id_item: ', id_item);
-  }
+	useEffect(() => {}, []);
 
 	return (
-    <div className="admin-page">
-      <HeaderComponent />
-      <div className="admin-body">
-        <LeftSideBar />
-        <TableSortSelect row_data={rows} />
-      </div>
-    </div>
+		<NextUIProvider>
+			<div className="admin-page">
+				<HeaderComponent />
+				<div className="admin-body">
+					<LeftSideBar />
+					{/* { typeNav && typeNav === 'Users' && <UserList row_data={rows} /> } */}
+					{/* <UserList /> */}
+
+					<Table aria-label="Example static collection table">
+						<TableHeader>
+							<TableColumn>NAME</TableColumn>
+							<TableColumn>ROLE</TableColumn>
+							<TableColumn>STATUS</TableColumn>
+						</TableHeader>
+						<TableBody>
+							<TableRow key="1">
+								<TableCell>Tony Reichert</TableCell>
+								<TableCell>CEO</TableCell>
+								<TableCell>Active</TableCell>
+							</TableRow>
+							<TableRow key="2">
+								<TableCell>Zoey Lang</TableCell>
+								<TableCell>Technical Lead</TableCell>
+								<TableCell>Paused</TableCell>
+							</TableRow>
+							<TableRow key="3">
+								<TableCell>Jane Fisher</TableCell>
+								<TableCell>Senior Developer</TableCell>
+								<TableCell>Active</TableCell>
+							</TableRow>
+							<TableRow key="4">
+								<TableCell>William Howard</TableCell>
+								<TableCell>Community Manager</TableCell>
+								<TableCell>Vacation</TableCell>
+							</TableRow>
+						</TableBody>
+					</Table>
+				</div>
+			</div>
+		</NextUIProvider>
 	);
 };
 

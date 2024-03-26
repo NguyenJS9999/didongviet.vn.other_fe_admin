@@ -1,0 +1,100 @@
+$border-input: #cdd4d8;
+
+.login-page {
+	// border: 1px solid red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.login-page-frame-container {
+	border: 1px solid $border-input;
+	border-radius: 10px;
+	display: flex;
+	min-width: 400px;
+	padding: 35px 30px;
+	// background-color: #0f202c;
+	// color: #ffffff;
+}
+
+.login-page-frame {
+	border: 1px solid white;
+	width: 100%;
+	display: flex;
+}
+
+.login-page-form {
+	border: 1px solid white;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.login-page-form-title {
+	// color: #fff;
+	font-size: 24px;
+	font-weight: 900;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.login-inputs,
+.login-actions {
+	margin-top: 1.875rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 0.75rem;
+
+	&>div {
+		width: 100%;
+	}
+}
+
+.login-password-field {
+	// border: 1px solid red;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+
+	&>div {
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+
+	& input {
+		border: 1px solid green($color: #000000);
+		width: 100%;
+	}
+}
+
+.login-inputs {
+	margin-top: 1.875rem;
+}
+
+.login-actions {
+	margin-top: 1.875rem;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.login-button {
+	background: rgb(190 30 45);
+	border-radius: 0.5rem;
+	padding: 0 1rem;
+	height: 44px;
+	width: 100%;
+	& span {
+		color: #ffffff;
+		font-size: 14px;
+		font-weight: bold;
+	}
+}

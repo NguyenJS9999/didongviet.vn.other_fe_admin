@@ -24,6 +24,7 @@ import Pagination from '@mui/material/Pagination';
 
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import FilterAltIcon from '@mui/icons-material/FilterAlt';
 
 import './tableSortSelect.scss';
 import { useState } from 'react';
@@ -93,7 +94,7 @@ function TableSortSelect({}) {
 										aria-expanded={open ? 'true' : undefined}
 										onClick={(event) => handleSelectSort(event, 'sort')}
 									>
-										Dashboard
+										<FilterAltIcon />
 									</Button>
 									<Menu
 										id="basic-sort"

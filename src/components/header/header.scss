@@ -22,21 +22,31 @@ $borderTable: rgba(224, 224, 224, 1);
 		width: 100%;
 	}
 }
-.admin-site-bar {
+.admin-navbar-static-top {
 	// border: 1px solid red;
 	display: flex;
 	flex: 1;
-	padding: 0 1.5rem;
+	padding: 0 1.5rem 0 1.5rem;
 	justify-content: space-between;
 	// align-items: center;
 	// gap: 1rem;
 }
-.admin-site-bar-btn-hamber {
+.sidebar-toggler {
+	background-color: transparent;
+	background-image: none;
+	color: #bbb;
+	padding: 0.5rem;
+	border: 0px;
+	&:hover {
+		cursor: pointer;
+	}
+}
+.search-form {
 	// border: 1px solid red;
 	display: flex;
-	// justify-content: flex-start;
-	// align-items: center;
-	// gap: 1rem;
+	align-items: center;
+	flex: 1;
+	gap: 1rem;
 }
 .admin-site-bar-search {
 	// border: 1px solid red;
@@ -45,17 +55,24 @@ $borderTable: rgba(224, 224, 224, 1);
 	// align-items: center;
 	// gap: 1rem;
 }
-.admin-site-bar-infor-user {
-	// border: 1px solid blue;
+
+.navbar-right {
 	display: flex;
-	// justify-content: flex-start;
-	// align-items: center;
-	// gap: 1rem;
+	align-items: center;
+ 	& > div  {
+	 padding: 0 0.75rem;
+ }
+}
+.admin-dropdown-user-menu {
+	& img {
+		width: 40px;
+    border-radius: 15px;
+	}
 }
 .admin-site-bar-actions {
 	// border: 1px solid green;
 	display: flex;
 	// justify-content: flex-start;
 	// align-items: center;
-	// gap: 1rem;
+	gap: 1rem;
 }
